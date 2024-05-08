@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
@@ -18,7 +17,7 @@ int main()
         }
         z++;
     }
-    if(y == 0)
+    if(y == 0 && x!=1)
     {
         cout << "This is a prime number\n";
     }

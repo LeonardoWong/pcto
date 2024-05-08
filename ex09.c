@@ -2,12 +2,27 @@
 
 int main()
 {
-    int a;
-    a = 1;
+    int x, y = 0, z = 2;
 
-    while(a<=100)
+    printf("Insert number\n");
+    scanf("%d", &x);
+
+    while (z < x)
     {
-        printf("%d\n", a++);
+        if (x % z == 0)
+        {
+            y++;
+        }
+        z++;
+    }
+    if (y == 0)
+    {
+        printf("This is a prime number\n");
+    }
+    else
+    {
+        printf("This is not a prime number\n");
     }
 
+    return 0;
 }
