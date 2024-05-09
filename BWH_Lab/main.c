@@ -16,7 +16,7 @@ void delprt(const char* s) {
     for (const char* c = s; *c != '\0'; ++c) {
         printf("%c", *c);
         fflush(stdout);
-        sleep_ms(23); // Sleep for 23 milliseconds
+        sleep_ms(23);
         putchar(' ');
         putchar('\b');
     }
