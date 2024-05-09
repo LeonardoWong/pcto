@@ -18,81 +18,89 @@ void delprt(const char* s)
 
 void squiz()
 {
-    int st, nd, rd, th, fth;
-    char ans[3], anss[3];
-    
-    system("clear");
-    delprt("Questo e' il quiz sulla skincare a cura di BWH Labs!\n");
-    sleep(1);
-    delprt("Vi ricordiamo che la collezione dei dati avviene interamente in modo locale, proteggendo la vostra privacy\n");
-    sleep(1);
-    delprt("Per risultati ottimali, vi preghiamo di seguire le indicazioni date per ogni risposta.\n");
-    sleep(4);
-    system("clear");
+    char ans[3], anss[3], ass[3], asssub[100], one[3], two[100], four[100];
+    int choice, three;
 
+    system("clear");
+    delprt("Benvenuti al quiz sulla skincare a cura di BWH Labs!\n");
+    sleep(1);
+
+    system("clear");
     delprt("Domanda 1. Hai mai fatto skincare?\n");
     scanf("%s", ans);
-   
-   sleep(1);
-   delprt("Ok");
-   system("clear");
+    sleep(1);
 
-   delprt("Domanda 2. Quali tra questi prodotti stai utilizzando attualmente?\n[rispondi scegliendo i numeri delle opzioni e aggiungendo spazi tra ogni numero]\n\n1) Detergente viso\n2) Tonico idratante\n3) Tonico esfoliante\n4) Scrub viso\n5)Crema idratante viso\n6) Siero antirughe\n7) Siero illuminante\n8) Maschera idratante\n9) Maschera purificante\n10) Acne gel\n11) Siero anti-macchie\n12) Trattamento antieta'");
-   scanf("%d", &st, &nd, &rd, &th, &fth);
-   sleep(1);
-   delprt("Ok");
-   system("clear");
-   
-   delprt("Domanda 3. Hai mai avuto sensibilita' a qualche prodotto per la cura della pelle?\n");
-   scanf("%s", anss);
-   sleep(1);
-   delprt("Ok");
-   system("clear");
+    system("clear");
+    delprt("Domanda 2. Quali tra questi prodotti stai utilizzando attualmente?\n[rispondi scegliendo i numeri delle opzioni e aggiungendo spazi tra ogni numero]\n\n1) Detergente viso\n2) Tonico idratante\n3) Tonico esfoliante\n4) Scrub viso\n5) Crema idratante viso\n6) Siero antirughe\n7) Siero illuminante\n8) Maschera idratante\n9) Maschera purificante\n10) Acne gel\n11) Siero anti-macchie\n12) Trattamento antieta'\n");
+    scanf("%d", &choice);
+    sleep(1);
 
-   delprt("Domanda 4. Stai utilizzando una qualsiasi prescrizione medica?\n");
+    system("clear");
+    delprt("Domanda 3. Hai mai avuto sensibilita' a qualche prodotto per la cura della pelle? [si / no]\n");
+    scanf("%s", anss);
+    sleep(1);
 
-   delprt("Quanto spesso ti esponi al sole e per quanto tempo?\n");
+    system("clear");
+    delprt("Domanda 4. Stai utilizzando una qualsiasi prescrizione medica?\n");
+    scanf("%s", ass);
+    sleep(1);
 
-   delprt("Usi la crema solare?");
+    system("clear");
+    delprt("Domanda 5. Quanto spesso ti esponi al sole e per quanto tempo?\n");
+    scanf("%s", asssub);
+    sleep(1);
 
-   delprt("Sei soggetto a sress, smog o segui una dieta particolare?\n");
+    system("clear");
+    delprt("Domanda 6. Usi la crema solare?\n");
+    scanf("%s", one);
+    sleep(1);
 
-   delprt("Quali risultati vorresti raggiungere?\n");
+    system("clear");
+    delprt("Domanda 7. Sei soggetto a stress, smog o segui una dieta particolare?\n");
+    scanf("%s", two);
+    sleep(1);
 
-   delprt("Quali prodotti e marche prediligi durante i trattamenti?\n");   
+    system("clear");
+    delprt("Domanda 8. Quali risultati vorresti raggiungere?\n1) Pelle luminosa\n2) Pelle idratata\n");
+    scanf("%d", &three);
+    sleep(1);
+
+    system("clear");
+    delprt("Domanda 9. Quali prodotti e marche prediligi durante i trattamenti?\n");
+    scanf("%s", four);
+    sleep(1);
+
+    system("clear");
+    delprt("Grazie per aver risposto al quiz!\n");
+    sleep(3);
+
+    delprt("Caricamento dei risultati in corso..");
+    sleep(0.5);
+    delprt(".");
+    sleep(0.5);
+    delprt(".");
+    sleep(0.7);
+    delprt(".");
+    sleep(1);
+
+    system("clear");
+    if(strcmp(ans, "si") == 0)
+    {
+      if(strcmp(ans, "SI") == 0)
+      {
+        if(strcmp(ans, "Si") == 0)
+        {
+        if(three == 1)
+        {
+            delprt("Ti consigliamo Avene per ottenere una pelle luminosa.\n");
+        }
+        }
+      } 
+    }
 }
 
 int main()
 {
-    system("clear");
-    delprt("Benvenuti al quiz sulla skincare a cura di BWH Labs!\n");
-    sleep(1.5);
+    squiz();
+    return 0;
 }
-
-/*
-
-2. **Hai mai avuto sensibilita'� a qualche prodotto per la cura della pelle?**
-   - Questa domanda aiuta a identificare potenziali allergie o irritazioni.
-
-3. **Con quale frequenza esfoli la pelle?**
-   - La frequenza dell'esfoliazione influisce sulla texture e sulla salute della pelle.
-
-4. **Stai utilizzando qualche prescrizione medica?**
-   - Conoscere i farmaci prescritti garantisce scelte di trattamento sicure.
-
-5. **Quanto spesso ti esponi al sole e per quanto tempo?**
-   - L'esposizione al sole influisce sull'invecchiamento della pelle e sul rischio di danni solari.
-
-6. **Usi la crema solare?**
-   - L'uso della crema solare e' fondamentale per proteggere la pelle dai dannosi raggi UV.
-
-7. **Sei soggetto a stress, smog o segui una dieta particolare?**
-   - Comprendere i fattori sottostanti (ad esempio, stress, dieta, ambiente) aiuta a personalizzare i trattamenti.
-
-9. **Quali risultati vorresti raggiungere?**
-   - Avere aspettative realistiche garantisce la soddisfazione del cliente.
-
-10. **Quali prodotti e marche prediligi durante i trattamenti?**
-    - Conoscere i prodotti utilizzati durante i trattamenti aiuta a valutarne l'efficacia².
-
-Ricorda che una corretta analisi della pelle inizia con una dettagliata procedura di accoglienza, che include domande sulla storia genetica, nutrizione, idratazione, stile di vita, storia medica, storia cosmetica, tipo di pelle, caratteristiche intrinseche (legate alla genetica), caratteristiche estrinseche (legati allo stile di vita) e fattori di rischio per il trattamento¹. Con queste informazioni, i professionisti possono fornire raccomandazioni accurate e personalizzate per una salute ottimale della pelle.*/
