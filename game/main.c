@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <ctype.h>
 
 #define YTEXT "\x1b[33;5;150m"
 #define RCOL "\x1b[0m"
