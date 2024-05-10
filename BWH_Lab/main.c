@@ -94,7 +94,7 @@ void skintypemk()
 
 void squiz()
 {
-    char ans[3], anss[3], ass[3], asssub[100], one[3], two[3], four[3];
+    char ans[3], anss[3], ass[3], asssub[100], one[3], two[100], four[100];
     int choice, three;
 
     system("clear");
